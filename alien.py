@@ -27,6 +27,11 @@ class Alien(Sprite):
         screen_rect = self.screen.get_rect()
         return (self.rect.right >= screen_rect.right) or (self.rect.left <= 0)
 
+    def check_bottom(self):
+       """Return True if alien is at bottom of screen."""
+       screen_rect = self.screen.get_rect()
+       return (self.rect.bottom >= screen_rect.height)
+
     def update(self):
         """Move the alien right or left."""
         self.x += self.settings.alien_speed * self.settings.fleet_direction
