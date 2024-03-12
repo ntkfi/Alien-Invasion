@@ -1,0 +1,2 @@
+- add timer when beginning game
+- add pause option
